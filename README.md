@@ -160,9 +160,14 @@ python batch_process.py my_dilutions.xlsx --output my_results.xlsx
 # Use full path to your file
 python batch_process.py "C:\Users\evya1\Desktop\my_dilutions.xlsx" --output-unit mL
 
+# If filename has spaces, use quotes
+python batch_process.py "dilutions - Copy.xlsx"
+
 # Get help
 python batch_process.py --help
 ```
+
+**💡 Tip:** If your filename contains spaces, always wrap it in quotes!
 
 **Option 2: Using the example script**
 
