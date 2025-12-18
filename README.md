@@ -145,14 +145,33 @@ This format is still supported but the header format is recommended for easier d
 
 #### Running Batch Processing
 
-**Option 1: Using the example script**
+**Option 1: Command Line Interface (Easiest)**
+
+```powershell
+# Basic usage - process your Excel file
+python batch_process.py my_dilutions.xlsx
+
+# Specify output unit
+python batch_process.py my_dilutions.xlsx --output-unit µL
+
+# Specify custom output filename
+python batch_process.py my_dilutions.xlsx --output my_results.xlsx
+
+# Use full path to your file
+python batch_process.py "C:\Users\evya1\Desktop\my_dilutions.xlsx" --output-unit mL
+
+# Get help
+python batch_process.py --help
+```
+
+**Option 2: Using the example script**
 
 ```powershell
 # Edit batch_process_example.py to set your input filename
 python batch_process_example.py
 ```
 
-**Option 2: Using Python code directly**
+**Option 3: Using Python code directly**
 
 ```python
 from dilution_core import process_excel_dilutions
@@ -280,6 +299,7 @@ The test suite covers:
 Dilution-calculator/
 ├── dilution_core.py           # Core calculation engine with unit conversion & batch processing
 ├── gui_version.py             # Graphical user interface
+├── batch_process.py           # Command-line interface for batch processing
 ├── batch_process_example.py   # Example script for Excel batch processing
 ├── test_dilution.py           # Comprehensive test suite
 ├── requirements.txt           # Project dependencies
